@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Nombre</th>
+    <th>Cantidad</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let objeto of objetos | async">
+    <th scope="row">{{objeto.id}}</th>
+    <td>{{objeto.nombre | titlecase}}</td>
+    <td>{{objeto.cantidad | number}}</td>
+  </tr>
+  </tbody>
+</table>
