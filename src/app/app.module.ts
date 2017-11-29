@@ -9,12 +9,7 @@ import {HttpModule} from '@angular/http';
 import {Routes, RouterModule} from '@angular/router';
 import { OtrosComponent } from './otros/otros.component';
 import { HomeComponent } from './home/home.component';
-
-const rutas: Routes = [
-  {path: '', redirectTo: '/objetos', pathMatch: 'full'},
-  {path: 'otros', component: OtrosComponent},
-  {path: 'objetos', component: ListaObjetoComponent}
-];
+import {rutas} from './rutas';
 
 @NgModule({
   declarations: [
