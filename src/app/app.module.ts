@@ -10,6 +10,8 @@ import {Routes, RouterModule} from '@angular/router';
 import { OtrosComponent } from './otros/otros.component';
 import { HomeComponent } from './home/home.component';
 import {rutas} from './rutas';
+import {FormsModule} from '@angular/forms';
+import { ObjetoCreateComponent } from './lista-objeto/objeto-create/objeto-create.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import {rutas} from './rutas';
     ListaObjetoComponent,
     NavbarComponent,
     OtrosComponent,
-    HomeComponent
+    HomeComponent,
+    ObjetoCreateComponent
   ],
   imports: [
     RouterModule.forRoot(rutas),
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [ObjetoService],
   bootstrap: [AppComponent]
