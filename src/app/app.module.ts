@@ -9,11 +9,15 @@ import {HttpModule} from '@angular/http';
 import {Routes, RouterModule} from '@angular/router';
 import { OtrosComponent } from './otros/otros.component';
 import { HomeComponent } from './home/home.component';
+import {FormsModule} from '@angular/forms';
+import { ObjetoCreateComponent } from './lista-objeto/objeto-create/objeto-create.component';
 
 const rutas: Routes = [
-  {path: '', redirectTo: '/objetos', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'otros', component: OtrosComponent},
-  {path: 'objetos', component: ListaObjetoComponent}
+  {path: 'objetos', component: ListaObjetoComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'objetos/create', component: ObjetoCreateComponent}
 ];
 
 @NgModule({
@@ -22,12 +26,14 @@ const rutas: Routes = [
     ListaObjetoComponent,
     NavbarComponent,
     OtrosComponent,
-    HomeComponent
+    HomeComponent,
+    ObjetoCreateComponent
   ],
   imports: [
     RouterModule.forRoot(rutas),
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [ObjetoService],
   bootstrap: [AppComponent]

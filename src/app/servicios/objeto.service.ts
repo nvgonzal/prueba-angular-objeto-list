@@ -11,5 +11,4 @@ export class ObjetoService {
   getObjetos(): Observable<Objeto[]> {
     return this.http.get('http://prueba-angular.dev/api/objetos').map((response: Response) => response.json());
   }
-
 }
