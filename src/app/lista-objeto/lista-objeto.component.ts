@@ -9,11 +9,11 @@ import {Observable} from 'rxjs/Observable';
   styleUrls: ['./lista-objeto.component.css']
 })
 export class ListaObjetoComponent implements OnInit {
-  objetos: Observable<Objeto[]>;
+  objetos$: Observable<Objeto[]>;
   constructor(private objetoService: ObjetoService) { }
 
   ngOnInit() {
-    this.objetos = this.objetoService.getObjetos();
+    this.objetos$ = this.objetoService.getObjetos();
   }
 
 }

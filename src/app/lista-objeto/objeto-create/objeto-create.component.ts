@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ObjetoService} from '../../servicios/objeto.service';
 
 @Component({
   selector: 'app-objeto-create',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObjetoCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private objetoService: ObjetoService) { }
 
   ngOnInit() {
   }
 
   createObjeto(objeto) {
-    console.log(objeto);
+    this.objetoService.createObjeto(objeto)
+      .subscribe(
+        respuesta => console.log(respuesta),
+        error => console.log(<any>error)
+      );
   }
 }

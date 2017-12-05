@@ -4,10 +4,9 @@
     <input type="email" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp"
            placeholder="Ingresa nombre" ngModel #spy>
   </div>
-  <br>{{spy.className}}
   <div class="form-group">
     <label for="cantidad">Cantidad</label>
-    <input type="number" class="form-control" id="cantidad" name="cantidad" ngModel>
+    <input type="number" class="form-control" id="cantidad" name="cantidad" ngModel #spy2>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

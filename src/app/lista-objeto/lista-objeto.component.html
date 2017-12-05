@@ -7,8 +7,8 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let objeto of objetos | async">
-    <th scope="row">{{objeto.id}}</th>
+  <tr *ngFor="let objeto of objetos$ | async">
+    <th scope="col">{{objeto.id}}</th>
     <td>{{objeto.nombre | titlecase}}</td>
     <td>{{objeto.cantidad | number}}</td>
   </tr>
