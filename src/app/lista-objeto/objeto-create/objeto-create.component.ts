@@ -19,5 +19,5 @@ export class ObjetoCreateComponent implements OnInit {
         respuesta => console.log(respuesta),
         error => console.log(<any>error)
       );
-  }
+}
 }
